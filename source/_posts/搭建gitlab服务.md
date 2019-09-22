@@ -1,6 +1,6 @@
 ---
 title: 搭建 gitlab 服务
-description: 
+description: 私有的项目管理仓库, 对于任何一个公司来说都是必须的. 所以, 作为一名开发人员, 如何搭建一个 gitlab 服务, 是一个很有必要的技能.
 ---
 
 > 私有的项目管理仓库, 对于任何一个公司来说都是必须的. 所以, 作为一名开发人员, 如何搭建一个 gitlab 服务, 是一个很有必要的技能.
@@ -101,6 +101,14 @@ postgresql['max_connections'] = 200
 sudo gitlab-ctl reconfigure
 # 重启
 gitlab-ctl restart 
+```
+
+---
+
+### 3. 修改 clone 地址
+
+```
+sudo vim /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
 ```
 
 ---
