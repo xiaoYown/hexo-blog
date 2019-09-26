@@ -77,6 +77,29 @@ git help --web log
 
 ```
 
+#### 5. pull request 工作流合并
+
+```
+# 在 github 上 pull request 或者 gitlab 上 create merge request
+
+# Step 1. Fetch and check out the branch for this merge request
+
+git fetch origin
+git checkout -b dev origin/dev
+
+Step 2. Review the changes locally
+
+Step 3. Merge the branch and fix any conflicts that come up
+
+git fetch origin
+git checkout master
+git merge --no-ff dev
+
+Step 4. Push the result of the merge to GitLab
+
+git push origin master
+```
+
 #### 其他命令
 
 ```
