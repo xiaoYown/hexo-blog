@@ -98,6 +98,17 @@ git merge --no-ff dev
 Step 4. Push the result of the merge to GitLab
 
 git push origin master
+
+```
+
+#### 6. 仓库相关
+
+```
+# existing_folder
+git init
+git remote add origin <url>
+# 修改仓库地址
+git remote set-url <new_url>
 ```
 
 #### 其他命令
