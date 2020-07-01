@@ -1,0 +1,28 @@
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo generate
+  - hexo deploy
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "xiaoYown"
+  - git config user.email "qzy09101018@sina.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GitHub_TOKEN}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+  - Source
+env:
+ global:
+  - GH_REF: git@github.com:xiaoYown/xiaoYown.github.io.git
