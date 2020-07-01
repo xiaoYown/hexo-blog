@@ -5,6 +5,9 @@ node_js: stable
 install:
   - npm install
 
+before_install:
+  - git pull
+
 script:
   - hexo clean
   - hexo generate
