@@ -28,5 +28,11 @@ branches:
   only:
     - master
 env:
- global:
-  - GH_REF: github.com:xiaoYown/xiaoYown.github.io.git
+  global:
+    - GH_REF: github.com:xiaoYown/xiaoYown.github.io.git
+
+notifications:
+  email:
+    - qzy09101018@sina.com
+  on_success: change
+  on_failure: always
